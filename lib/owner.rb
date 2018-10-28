@@ -5,6 +5,7 @@ class Owner
   def initialize(species)
     @pets = {fishes: [], cats: [], dogs: []}
     @species = species
+  
   end
     
   def self.all
