@@ -65,17 +65,21 @@ class Owner
       fish.mood = "happy"
     end
   end
-   def sell_pets
-    @pets.empty?.each do |key, value|
+   
+  def sell_pets
+    @pets.each do |key, value|
       value.each do |pet|
         pet.mood = "nervous"
-        end
-      end
-
-      def list_pets
-        p @pets
       end
     end
+  end
+
+  def list_pets
+
+        p @pets
+  
+  end
+  
  
 
 end
