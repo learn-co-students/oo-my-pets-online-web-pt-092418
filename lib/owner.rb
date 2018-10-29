@@ -33,18 +33,31 @@ class Owner
   end
   
   def name
-  p "#{@name}"
+    p "#{@name}"
   end
 
   def buy_fish(pets)
-  if @pets[:fish] = 0
-    nil
-  else 
-      @pets[:fish => 1]
+      @pets[:fishes] << Fish.new(pets)
+    end
+
+  def buy_cat(cat_name)
+      @pets[:cats] << Cat.new(cat_name)
   end
+
+  def buy_dog(dog_name)
+      @pets[:dogs] << Dog.new(dog_name)
+  end
+
+ def walk_dogs
+  @pets[:dogs].each |dog|
+    dog.mood = "happy"
+    end
+  end
+ 
+end
+
 end
 
   
 
 
-end
